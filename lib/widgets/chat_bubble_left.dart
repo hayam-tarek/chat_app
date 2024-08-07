@@ -1,4 +1,5 @@
-import 'package:chat_app/constant.dart';
+import 'package:chat_app/helper/constant.dart';
+import 'package:chat_app/helper/extract_string.dart';
 import 'package:chat_app/models/message_model.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class ChatBubbleLeft extends StatelessWidget {
           ),
           padding: const EdgeInsets.symmetric(
             horizontal: 10,
+            vertical: 5,
           ),
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -26,46 +28,42 @@ class ChatBubbleLeft extends StatelessWidget {
                 bottomRight: Radius.circular(20)),
             color: kSecondColor,
           ),
-          child: Row(
+          child: Stack(
+            clipBehavior: Clip.none,
             children: [
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.start,
-              //   children: [
-              //     Text(
-              //       'hayam:',
-              //       style: TextStyle(
-              //         fontSize: 12,
-              //         color: Colors.black54,
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text(
-                    maxLines: 500,
-                    overflow: TextOverflow.ellipsis,
-                    message.message,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                    ),
+              Positioned(
+                left: 0,
+                top: -0,
+                child: Text(
+                  extractName(email: message.id),
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Colors.black54,
                   ),
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    '${message.time.hour}:${message.time.minute}',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Colors.black54,
-                    ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Text(
+                  maxLines: 500,
+                  overflow: TextOverflow.ellipsis,
+                  message.message,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
                   ),
-                ],
+                ),
+              ),
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: Text(
+                  '${message.time.hour}:${message.time.minute}',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Colors.black54,
+                  ),
+                ),
               ),
             ],
           ),

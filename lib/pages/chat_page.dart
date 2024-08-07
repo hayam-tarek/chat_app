@@ -1,4 +1,4 @@
-import 'package:chat_app/constant.dart';
+import 'package:chat_app/helper/constant.dart';
 import 'package:chat_app/models/message_model.dart';
 import 'package:chat_app/widgets/chat_bubble_left.dart';
 import 'package:chat_app/widgets/chat_bubble_right.dart';
@@ -62,7 +62,9 @@ class _ChatPageState extends State<ChatPage> {
                       itemCount: messagesList.length,
                       itemBuilder: (context, index) {
                         if (messagesList[index].id == email) {
-                          return ChatBubbleRight(message: messagesList[index]);
+                          return ChatBubbleRight(
+                            message: messagesList[index],
+                          );
                         } else {
                           return ChatBubbleLeft(
                             message: messagesList[index],

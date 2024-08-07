@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:chat_app/constant.dart';
+import 'package:chat_app/helper/constant.dart';
 import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_form_field.dart';

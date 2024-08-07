@@ -1,4 +1,4 @@
-import 'package:chat_app/constant.dart';
+import 'package:chat_app/helper/constant.dart';
 import 'package:flutter/material.dart';
 
 void showSnakeBar(BuildContext context, {required String message}) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField(
+  const CustomTextFormField(
       {super.key,
       required this.hintText,
       required this.onChanged,
@@ -10,10 +10,10 @@ class CustomTextFormField extends StatelessWidget {
       this.validator});
 
   final String hintText;
-  Function(String)? onChanged;
-  String? Function(String? val)? validator;
-  TextInputType? textInputType;
-  bool? obscureText;
+  final Function(String)? onChanged;
+  final String? Function(String? val)? validator;
+  final TextInputType? textInputType;
+  final bool? obscureText;
 
   @override
   Widget build(BuildContext context) {

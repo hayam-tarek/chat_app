@@ -2,17 +2,17 @@ import 'package:chat_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class MessageTextField extends StatelessWidget {
-  MessageTextField({
+  const MessageTextField({
     super.key,
     this.onSubmitted,
     this.onPressed,
     this.controller,
     this.onChanged,
   });
-  Function(String value)? onSubmitted;
-  Function(String)? onChanged;
-  void Function()? onPressed;
-  TextEditingController? controller;
+  final Function(String value)? onSubmitted;
+  final Function(String)? onChanged;
+  final void Function()? onPressed;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {

@@ -88,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                           if (val == null || !val.contains('@')) {
                             return 'Please enter a valid email';
                           }
+                          return null;
                         },
                         onChanged: (val) {
                           emailAddress = val;
@@ -104,6 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                           if (val == null || val.length < 6) {
                             return 'Please enter a valid password';
                           }
+                          return null;
                         },
                         onChanged: (val) {
                           password = val;

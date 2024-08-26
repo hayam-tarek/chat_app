@@ -4,7 +4,7 @@ This project is a Flutter-based chat application designed for scholars to connec
 
 ## Features:
 
-- One-on-One Chat: Enables direct messaging between two scholars.
+- One-on-One Chat: Enables direct messaging between scholars.
 - User Authentication: Employs Firebase Authentication for secure login and registration using email and password.
 - Firebase Integration: Leverages Firebase Core, Firebase Auth, and Cloud Firestore for seamless functionality.
 - User Input: Allows scholars to enter their email and password for authentication.
